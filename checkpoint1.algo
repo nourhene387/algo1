@@ -1,0 +1,41 @@
+ALGORITHM read_a_sentence
+VAR
+   countcharacters: INTEGER := 0;
+   countword: INTEGER := 0;
+   countcharacters: INTEGER := 0;
+   Character:="";
+    Sentence :="";
+BEGIN
+/************Read characters *****************/
+   WHILE (c != ".") DO
+
+    Write "Enter a character (end with a point): "
+         Character:=   Read Character
+
+    /******************add the Character to the sentence and **********/
+       sentence:=sentence+c;
+
+       /*********count the characters ******************/
+
+      countcharacters:= countcharacters+1;
+     
+     
+      
+      /*********************Check if the character is a vowel********/
+            IF (Character = 'a' Or Character = 'e' Or Character = 'i' Or Character = 'o' Or Character = 'u' Or
+               Character = 'A' Or Character = 'E' Or Character = 'I' Or Character = 'O' Or Character = 'U') THEN
+               CounterVowels ← CounterVowels + 1
+
+            END_IF
+ END_WHILE
+  /*************** count word *******************/
+ FOR i FROM 1 TO sentence.length STEP step  DO
+    IF (Character[i]=" ") THEN
+         countword=countword+1;
+      END_IF
+ END_FOR
+   // Display the results
+        Write "Length of the sentence: ", CounterLength
+        Write "Number of words: ", CounterWords
+        Write "Number of vowels: ", CounterVowels
+END
